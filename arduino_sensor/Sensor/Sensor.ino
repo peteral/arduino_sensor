@@ -8,6 +8,7 @@ void loop() {
 	int sensorVal = analogRead(A0);
 	float voltage = (sensorVal / 1024.0) * 5.0;
 	float temperature = (voltage - 0.5) * 100;
+	Serial.print("Temperature = ");
 	Serial.println(temperature);
 	delay(1000);
 }

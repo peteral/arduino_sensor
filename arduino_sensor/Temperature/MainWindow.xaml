@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Temperature"
         mc:Ignorable="d"
-        Title="Temperature" Height="145.17" Width="259.517">
+        Title="Temperature" Height="145.17" Width="259.517" Loaded="Window_Loaded">
     <Grid>
         <Ellipse x:Name="status" Fill="#FFF34646" HorizontalAlignment="Left" Height="26" Margin="192,17,0,0" Stroke="Black" VerticalAlignment="Top" Width="26"/>
         <Label x:Name="label" Content="Arduino" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top"/>

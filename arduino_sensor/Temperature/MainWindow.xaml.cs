@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO.Ports;
 
 namespace Temperature
 {
@@ -24,5 +25,17 @@ namespace Temperature
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            foreach (string port in SerialPort.GetPortNames())
+                ports.Items.Add(port);
+
+            if (ports.Items.Count > 0)
+                ports.SelectedIndex = 0;
+
+            new SerialReader(ports, temperature, status);
+        }
+
     }
 }
